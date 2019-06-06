@@ -8,7 +8,7 @@ WORKDIR /sample-rest
 ADD . /sample-rest
 
 # Install any needed packages specified in requirements.txt
-RUN pip install --trusted-host pypi.python.org -r requirements.txt
+RUN pip3 install --trusted-host pypi.python.org -r requirements.txt
 
 # Make port 3601 available to the world outside this container
 EXPOSE 3601
