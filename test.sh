@@ -1,6 +1,6 @@
 #!/bin/bash
 
-ENDPOINT=http://localhost:80
+ENDPOINT=http://localhost:8080
 
 curl --header "Content-Type: application/json"   --request POST   --data '{"color":"green","taste":"sweet"}' $ENDPOINT/v1/bananas
 curl $ENDPOINT/v1/bananas
