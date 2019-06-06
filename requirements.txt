@@ -1,0 +1,4 @@
+flask-restful
+diskcache
+flask-sqlalchemy
+configparser
