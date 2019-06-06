@@ -11,7 +11,7 @@ ADD . /sample-rest
 RUN pip3 install -r requirements.txt
 
 # Make port 3601 available to the world outside this container
-EXPOSE 3601
+EXPOSE 8080
 
 # Run service when the container launches
 ENTRYPOINT /sample-rest/entry.bash service

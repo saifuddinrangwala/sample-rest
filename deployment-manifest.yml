@@ -1,0 +1,37 @@
+##################################################################################################
+# Details service
+##################################################################################################
+---
+apiVersion: v1
+kind: Service
+metadata:
+  name: sample-rest
+  labels:
+    app: sample-rest
+spec:
+  ports:
+  - port: 8080
+    name: http
+  selector:
+    app: sample-rest
+---
+apiVersion: extensions/v1beta1
+kind: Deployment
+metadata:
+  name: sample-rest
+spec:
+  replicas: 1
+  template:
+    metadata:
+      labels:
+        app: sample-rest
+        version: v1
+    spec:
+      containers:
+      - name: sample-rest
+        image: saifuddin53/sample-rest
+        imagePullPolicy: Always
+        ports:
+        - containerPort: 8080
+---
+
